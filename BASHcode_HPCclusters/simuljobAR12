@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --nodes=2
+#SBATCH --partition=batch
+#SBATCH -J simuljobr
+#SBATCH -o simuljobR.%J.out
+#SBATCH -e simuljobR.%J.err
+#SBATCH --mail-type=ALL
+#SBATCH --time=9:00:00
+#SBATCH --mem=7G
+
+#run the application:
+module load R/3.6.0/gnu-6.4.0
+Rscript simulationAR12.R $1  

@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --partition=batch
+#SBATCH -J exchoudar12
+#SBATCH -o exchoudar12.%J.out
+#SBATCH -e exchoudar12.%J.err
+#SBATCH --mail-type=ALL
+#SBATCH --time=10:00
+#SBATCH --mem=7G
+
+#run the application:
+module load R/3.6.0/gnu-6.4.0
+Rscript ExtractionmeancurvesCHOUDMA4.R $1  
