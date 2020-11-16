@@ -13,7 +13,7 @@ PseudoData based on the odor C=Anise trial, presented in incorrect order (OutSeq
 
 ## Code
 
-The structure of the code is clasiffied in several folders, for higher details consult the Reproduce_instructions.docx guide and BMARD_simuations_data_dictionary.txt file in the README folder.
+The structure of the code is clasiffied in several folders, for higher details consult the Reproduce_instructions.docx guide and BMARD_simuations_data_dictionary.txt file in the Guides folder.
 
 ### BASHcode_HPCclusters
 Auxiliary codes and technical specifications for running BMARD on HPC clusters managed by SLURM
