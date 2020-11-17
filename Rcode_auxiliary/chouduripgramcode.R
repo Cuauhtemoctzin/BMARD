@@ -9,7 +9,9 @@ library(Rcpp)
 library(doParallel)
 
 # change the directory accordingly
-Rcpp::sourceCpp('~/BMARD_code/CPPcode/NDPrcppBen_pgram.cpp')
+ codepath<-dirname(rstudioapi::getActiveDocumentContext()$path )
+Rcpp::sourceCpp(paste(codepath, '/CPPcode/NDPrcppBen_pgram.cpp',sep="" ) ) 
+
 
 
 multirun <- function(S){  
@@ -25,7 +27,7 @@ omegas<-seq(.002, .498,by=.002)
 
 # change the directory accordingly
 # change the database name as necessary 
-database<-readRDS( "~/pgrammatrixAR12.rds" )
+database<-readRDS(paste(codepath,"/SimulationsDATABASES/pgrammatrixAR12.rds",sep="" ))
 
 Nsamp=100000
 
@@ -42,7 +44,7 @@ for(k in 1:chains){
 
 BDP<-mclapply(B, multirun, mc.cores = 3)
 
-saveRDS(BDP, file= paste( "ChoudhurimixAR12_V"  , as.numeric(argsbash)  ,  ".rds", sep = "" )   ) 
+saveRDS(BDP, file= paste( codepath,"ChoudhurimixAR12_V"  , as.numeric(argsbash)  ,  ".rds", sep = "" )   ) 
 
 
 
