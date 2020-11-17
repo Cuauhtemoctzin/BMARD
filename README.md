@@ -21,8 +21,12 @@ Main Rcpp code of BMARD and the Bernstein polynomial method of Choudhuri (2014)
 ### Rcode_auxiliary
 Auxiliary R code for MCMC post processing and simulations generation
 
-
 ## Instructions for use
+### Guides
+
+The Guides folder contains detailed instructions to reproduce Figure 2, Table 1, and Table 2 from section 3.
+
+### to test the BMARD method
 
 In Rstudio run the following code to replicate the BMARD fitting on simulations settings. 
 
