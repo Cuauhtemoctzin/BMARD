@@ -1,6 +1,7 @@
 ### computation of all modes#### 
 i<-as.numeric(  commandArgs()[6])
-#setwd("/ibex/scratch/projects/c2088/")
+
+# change the directories accordingly
 source( "~/BMARD_code/Rcode/Extractionmaincomponentsmodes.R" )
 
 listmodes<-list()
