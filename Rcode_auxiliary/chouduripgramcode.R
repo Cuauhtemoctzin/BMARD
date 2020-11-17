@@ -8,9 +8,8 @@ library(Rcpp)
 #library(TSA)
 library(doParallel)
 
-# change the directory accordingly
- codepath<-dirname(rstudioapi::getActiveDocumentContext()$path )
-Rcpp::sourceCpp(paste(codepath, '/CPPcode/NDPrcppBen_pgram.cpp',sep="" ) ) 
+# change the directories accordingly
+Rcpp::sourceCpp( '~/CPPcode/NDPrcppBen_pgram.cpp' ) 
 
 
 
@@ -27,7 +26,7 @@ omegas<-seq(.002, .498,by=.002)
 
 # change the directory accordingly
 # change the database name as necessary 
-database<-readRDS(paste(codepath,"/SimulationsDATABASES/pgrammatrixAR12.rds",sep="" ))
+database<-readRDS("~/SimulationsDATABASES/pgrammatrixAR12.rds")
 
 Nsamp=100000
 
@@ -44,7 +43,7 @@ for(k in 1:chains){
 
 BDP<-mclapply(B, multirun, mc.cores = 3)
 
-saveRDS(BDP, file= paste( codepath,"ChoudhurimixAR12_V"  , as.numeric(argsbash)  ,  ".rds", sep = "" )   ) 
+saveRDS(BDP, file= paste( "ChoudhurimixAR12_V"  , as.numeric(argsbash)  ,  ".rds", sep = "" )   ) 
 
 
 
