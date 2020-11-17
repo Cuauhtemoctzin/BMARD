@@ -4,15 +4,17 @@
 
 ###### kernel and spline estimation  smoothing ####
 
+## sourcing the necessary code
+ codepath<-dirname(rstudioapi::getActiveDocumentContext()$path )
 # source the code ExtractionBMARDmaincomponentsmodes.R
 #adjust the directories accordingly
-source("~/BMARD_code/Rcode/ExtractionBMARDmaincomponentsmodes.R")
+source(paste(codepath,"/Rcode_auxiliary/ExtractionBMARDmaincomponentsmodes.R",sep="" )   )
 # optimize the Leave One Out Crossvalidation and find the optimal bandwidth for both method
 
 #adjust the directories accordingly
-MA4pgrammatrix<-readRDS("~/pgrammatrixMA4.rds")
-AR12pgrammatrix<-readRDS("~/pgrammatrixAR12.rds")
-pgram_matrix<-readRDS("~/pgrammatrixAR2.rds")
+MA4pgrammatrix<-readRDS(paste(codepath,"/SimulationsDATABASES/pgrammatrixMA4.rds",sep="" ))
+AR12pgrammatrix<-readRDS(paste(codepath,"/SimulationsDATABASES/pgrammatrixAR12.rds",sep="" ))
+pgram_matrix<-readRDS(paste(codepath,"/SimulationsDATABASES/pgrammatrixAR2.rds",sep="" ))
 
 for(i in 1:1000){
   #spline ma4
