@@ -15,9 +15,6 @@ PseudoData based on the odor C=Anise trial, presented in incorrect order (OutSeq
 
 The structure of the code is clasiffied in several folders, for higher details consult the Reproduce_instructions.docx guide and BMARD_simuations_data_dictionary.txt file in the Guides folder.
 
-### BASHcode_HPCclusters
-Auxiliary codes and technical specifications for running BMARD on HPC clusters managed by SLURM
-
 ### CPPcode
 Main Rcpp code of BMARD and the Bernstein polynomial method of Choudhuri (2014)
 
