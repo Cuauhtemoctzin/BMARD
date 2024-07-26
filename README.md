@@ -1,6 +1,6 @@
 # BMARD
 
-The BMARD method stands for Bayesian Mixture Auto-Regressive Decomposition. BMARD is a stationary time series decomposition into latent processes such that each of the components is specified as a second-order autoregressive process AR(2). You can find the details and justifications of the method in the preprint https://arxiv.org/abs/2102.11971 where the main application is the analysis of brains signals if a rat during a non-spatial memory task. 
+The BMARD method stands for Bayesian Mixture Auto-Regressive Decomposition. BMARD is a stationary time series decomposition into latent processes such that each of the components is specified as a second-order autoregressive process AR(2). You can find the details and justifications of the method in [Granados et al, 2022](https://www.sciencedirect.com/science/article/pii/S0167947321002437) where the main application is the analysis of brains signals if a rat during a non-spatial memory task. 
 
 ## Data
 
